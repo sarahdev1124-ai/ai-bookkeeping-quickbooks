@@ -1,0 +1,476 @@
+/* =========================
+   Base
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f8f6;
+  color: #202124;
+}
+
+
+/* =========================
+   Main Dashboard
+   ========================= */
+
+.dashboard {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.dashboard h1 {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #105c4d;
+}
+
+.dashboard h2 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #105c4d;
+}
+
+.dashboard h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #105c4d;
+}
+
+
+/* =========================
+   Description
+   ========================= */
+
+.dashboard-description {
+  display: inline-block;
+  margin: 0 0 24px 0;
+  padding: 9px 14px;
+  color: #2f6f44;
+  background-color: #eef7f1;
+  border: 1px solid #b9d8c1;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-description {
+  margin: 0 0 12px 0;
+  color: #6b7470;
+  font-size: 14px;
+}
+
+.confidence-note {
+  margin: 0 0 18px 0;
+  color: #6d7672;
+  font-size: 13px;
+}
+
+
+/* =========================
+   Client Selector
+   ========================= */
+
+.client-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.client-selector label {
+  margin: 0;
+  font-weight: 600;
+  color: #39443f;
+}
+
+select {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #26332f;
+  background-color: white;
+  border: 1px solid #cbd4cf;
+  border-radius: 7px;
+  outline: none;
+}
+
+select:focus {
+  border-color: #2ca01c;
+  box-shadow: 0 0 0 2px rgba(44, 160, 28, 0.12);
+}
+
+
+/* =========================
+   Action Buttons
+   ========================= */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid #cbd8d0;
+  border-radius: 7px;
+  background-color: white;
+  color: #345348;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #f1f7f3;
+  border-color: #a9c4b2;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+
+/* Primary action */
+.actions button:first-child {
+  background-color: #2ca01c;
+  color: white;
+  border-color: #2ca01c;
+}
+
+.actions button:first-child:hover {
+  background-color: #248b18;
+  border-color: #248b18;
+}
+
+
+/* QuickBooks import button */
+.actions button:nth-child(3) {
+  background-color: #edf8ea;
+  color: #26751b;
+  border-color: #a9d69f;
+}
+
+.actions button:nth-child(3):hover {
+  background-color: #e1f3dd;
+  border-color: #8fc784;
+}
+
+
+/* =========================
+   Tables
+   ========================= */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 12px;
+  margin-bottom: 28px;
+  background-color: white;
+  border: 1px solid #dfe5e1;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(35, 53, 44, 0.06);
+}
+
+table {
+  width: 100%;
+  min-width: 1000px;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  padding: 12px 13px;
+  background-color: #f0f4f1;
+  color: #3e4a45;
+  border-bottom: 1px solid #d7dfda;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+table td {
+  padding: 12px 13px;
+  border-bottom: 1px solid #edf0ee;
+  color: #303a36;
+  font-size: 13px;
+  line-height: 1.35;
+  max-width: 250px;
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #fbfcfb;
+}
+
+table tbody tr:hover {
+  background-color: #f3f8f4;
+}
+
+
+/* =========================
+   Table Header Corners
+   ========================= */
+
+table thead tr th:first-child {
+  border-top-left-radius: 9px;
+}
+
+table thead tr th:last-child {
+  border-top-right-radius: 9px;
+}
+
+
+/* =========================
+   Status
+   ========================= */
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status.approved {
+  background-color: #e7f5e9;
+  color: #2d6a38;
+}
+
+.status.pending {
+  background-color: #fff4d6;
+  color: #8a6817;
+}
+
+
+/* =========================
+   Confidence
+   ========================= */
+
+.low-confidence {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+
+/* =========================
+   Review
+   ========================= */
+
+.review-needed {
+  color: #c45b45;
+}
+
+.ai-approved {
+  color: #367044;
+}
+
+.review-needed button {
+  padding: 5px 10px;
+  background-color: #fff8f5;
+  color: #c45b45;
+  border: 1px solid #e5b3a6;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.review-needed button:hover {
+  background-color: #fff0eb;
+  border-color: #d99c8d;
+}
+
+
+/* =========================
+   QuickBooks Section Divider
+   ========================= */
+
+hr {
+  margin: 34px 0 26px 0;
+  border: 0;
+  border-top: 1px solid #dfe5e1;
+}
+
+
+/* =========================
+   QuickBooks Error
+   ========================= */
+
+.quickbooks-error {
+  margin: 16px 0 22px 0;
+  padding: 15px 18px;
+  background-color: #fff7f6;
+  border: 1px solid #e2b0a8;
+  border-left: 4px solid #c94f3d;
+  border-radius: 8px;
+  color: #7d2a21;
+}
+
+.quickbooks-error strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.quickbooks-error p {
+  margin: 0;
+  font-size: 13px;
+}
+
+
+/* =========================
+   QuickBooks Review Panel
+   ========================= */
+
+td[colspan="12"],
+td[colspan="13"] {
+  width: 100%;
+  max-width: none;
+  padding: 18px 20px;
+  background-color: #f7faf8;
+  border-top: 1px solid #d9e4dc;
+  border-bottom: 1px solid #d9e4dc;
+}
+
+td[colspan="12"] h3,
+td[colspan="13"] h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #2f4038;
+}
+
+td[colspan="12"] p,
+td[colspan="13"] p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+td[colspan="12"] label,
+td[colspan="13"] label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #34413b;
+}
+
+td[colspan="12"] select,
+td[colspan="13"] select {
+  min-width: 160px;
+  margin: 0;
+  padding: 6px 9px;
+  font-size: 13px;
+}
+
+td[colspan="12"] label button,
+td[colspan="13"] label button {
+  margin-left: 2px;
+  padding: 6px 11px;
+  background-color: #2ca01c;
+  color: white;
+  border: 1px solid #2ca01c;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+td[colspan="12"] label button:hover,
+td[colspan="13"] label button:hover {
+  background-color: #248b18;
+  border-color: #248b18;
+}
+
+td[colspan="12"] > button,
+td[colspan="13"] > button {
+  margin-top: 8px;
+  padding: 6px 11px;
+  background-color: white;
+  color: #59645f;
+  border: 1px solid #cbd4cf;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+td[colspan="12"] > button:hover,
+td[colspan="13"] > button:hover {
+  background-color: #f1f4f2;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+.dashboard h1 {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #24523b;
+}
+
+  .actions {
+    gap: 8px;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .client-selector {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  table {
+    min-width: 950px;
+  }
+
+  table th,
+  table td {
+    padding: 9px 10px;
+  }
+}
