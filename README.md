@@ -76,3 +76,11 @@ bookkeeping-app/
 ├── package.json
 ├── package-lock.json
 └── README.md
+
+## Status
+
+This is an actively developed portfolio project. Planned future enhancements include deployment, authentication, additional reporting features, and further AI automation.
+
+## Security
+
+API keys, database credentials, and other environment-specific secrets are stored in local environment variables and are not committed to the repository.
